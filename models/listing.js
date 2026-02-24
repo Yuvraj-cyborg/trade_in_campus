@@ -46,9 +46,10 @@ const listSchema = new mongoose.Schema({
     enum: STATUSES,
     default: "Available",
   },
-  ownerSic: {
-    type: String,
-    require: true,
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
   },
 });
 

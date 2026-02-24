@@ -4,6 +4,7 @@ import logger from "./middleware/logger.js";
 import connectToDB from "./utils/db.js";
 
 import userRouter from "./routes/user.js";
+import listingRouter from "./routes/listing.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRouter);
+app.use("/listings", listingRouter);
 
 app.listen(3000, () => {
   console.log("Server started at 3000");
