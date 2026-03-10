@@ -42,7 +42,7 @@ const listSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    require: true,
+    required: true,
     enum: STATUSES,
     default: "Available",
   },
